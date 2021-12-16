@@ -329,7 +329,7 @@ void *console(void* c)
 			formatted_msg = malloc(BUFF_SIZE);
 			formatted_msg2 = malloc(BUFF_SIZE);
 			sprintf(formatted_msg, "\n%s is kicked from server.\nReason: %s", targetnode->username, msg); // 모두에게 갈 메세지
-			sprintf(formatted_msg2, "\nYou kicked from server. Press Ctrl+C to end process.\nReason: %s", msg); // 킥 당한 유저에게 갈 메세지
+			sprintf(formatted_msg2, "\nYou are kicked from server. Press Ctrl+C to end process.\nReason: %s", msg); // 킥 당한 유저에게 갈 메세지
 			
 			tmpnode = client_list;
 			pthread_mutex_lock(&client_kick_lock);
